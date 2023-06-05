@@ -3,7 +3,7 @@ pipeline {
    stages {
        stage('setup') {
          steps {
-             browserstack(credentialsId: env.CREDENTIALS_ID) {
+             browserstack(credentialsId: 'browserstack-credentials') {
                  sh 'python3 -m venv bsenv'
                  sh '''
                  source bsenv/bin/activate
